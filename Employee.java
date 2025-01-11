@@ -114,4 +114,25 @@ public class Employee {
 		
 	}
 
+
+	public void delete(int Id) {
+		
+		try {
+			 String URL="jdbc:mysql://localhost:3306/Employee";
+		        String uname="root";
+		        String pass="vaibhav@123";   
+		        Connection con =DriverManager.getConnection(URL,uname,pass);
+		        String query="DELETE FROM Info WHERE Id = ?;";
+		        PreparedStatement pst=con.prepareStatement(query);
+		        pst.setInt(1, Id);
+		        pst.execute();
+		        System.out.println("data Deleted  successfully... ");
+		        con.close();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
+
 }

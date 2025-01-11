@@ -11,7 +11,7 @@ public class Main {
 		E.InsertIntoTable("rohan",2 ,100000);
 		E.Update(1,"vaibhav");
 		E.Update(2,"nikhil");
-		
+		E.delete(2);
 		E.ShowData();
 	}
 
